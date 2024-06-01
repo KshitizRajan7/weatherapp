@@ -69,35 +69,33 @@ const WeatherApp = () => {
   };
   return (
     <div className="container">
-    <h1 className='title'>Kshitiz Rajan</h1>
-    <form onSubmit={(e) =>{e.preventDefault();search()}} >
+    <h1 className='title'>Weather App</h1>
+    <form onSubmit={(e) =>{e.preventDefault();search()}} className="form">
       <div className="topBar">
           <input
             type="text"
             className="cityInput"
-            placeholder="Enter City Name"
+            placeholder="Enter City / Country Name"
           />
-        
           <div type="button" className="searchIcon" onClick={search}>
             <img src={searchIcon} alt="" />
           </div>
       </div>
       </form>
-
       <div className="weatherImage">
         <img src={weatherIcon} alt="" />
       </div>
       <div className="weatherTemp">24 C</div>
       <div className="weatherLocation">Kathmandu</div>
       <div className="dataContainer">
-        <div className="element">
+        <div className="leftContainer">
           <img src={humidityIcon} alt="" className="icon" />
           <div className="data">
             <div className="humidityPercent">64%</div>
             <div className="text">Humidity</div>
           </div>
         </div>
-        <div className="element">
+        <div className="rightContainer">
           <img src={windIcon} alt="" className="icon" />
           <div className="data">
             <div className="windRate">18 km/hr</div>
